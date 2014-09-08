@@ -4,7 +4,7 @@
   apt: name=ufw
        state=present
        update_cache=yes
-       cache_valid_time=3600
+       cache_valid_time=86400
 
 - name: Manage ufw rules
   ufw: delete={{item.value.delete | default('no')}}
