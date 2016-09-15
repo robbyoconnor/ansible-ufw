@@ -12,7 +12,7 @@
        port={{item.value.port | default()}}
        proto={{item.value.proto | default('any')}}
        rule={{item.value.rule | default('allow')}}
-  with_dict: ufw_rules
+  with_dict: "{{ufw_rules}}"
   when: ufw_rules is defined
 
 - name: Manage ufw config
@@ -20,6 +20,6 @@
        logging={{item.value.logging | default('low')}}
        policy={{item.value.policy | default('reject')}}
        state={{item.value.state | default('enable')}}
-  with_dict: ufw_config
+  with_dict: "{{ufw_config}}"
   when: ufw_config is defined
        
