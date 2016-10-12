@@ -1,5 +1,6 @@
 Role Name
 ========
+[![Build Status](https://travis-ci.org/yatesr/ansible-ufw.svg?branch=master)](https://travis-ci.org/yatesr/ansible-ufw)
 
 ufw
 
@@ -40,7 +41,7 @@ Example Playbook
       https:
         port: 443
         proto: tcp
-        rule: allow 
+        rule: allow
 
     ufw_config:
       globalconfig:
